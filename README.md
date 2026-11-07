@@ -1,33 +1,40 @@
 # ErsatzRS Next runtime packages
 
 This repository distributes pinned ErsatzTV Next runtime packages used by
-ErsatzRS. It contains dependency packages, their upstream source archive,
-compatibility patches, licence, provenance and checksums.
+ErsatzRS, with upstream source, compatibility patches, licence, provenance and
+checksums. FFmpeg is distributed separately.
 
 ## Current runtime
 
-- Version: `0.1.0-0362692-ersatzrs.1`
-- Release tag: `next-0362692-ersatzrs.1`
-- Upstream: `ErsatzTV/next`, revision `03626929089a438245cfc77cbedda6e92d98dc9f`
-- Platforms: Linux x64, ARM64 and ARMv7; Windows x64; macOS x64 and ARM64.
+- Version: `0.2.5-c5cb065-ersatzrs.1`
+- [Release and downloads](https://github.com/bartdeijkers/ErsatzRS-next/releases/tag/next-0.2.5-c5cb065-ersatzrs.1)
+- Upstream: `ErsatzTV/next`, revision `c5cb065f9f35dbbcb7c05845f0f92c70f576a480`.
+- Packages: Linux x64, Linux ARM64, Linux ARMv7 and Windows x64.
 
-These are the existing verified packages, copied without rebuilding or changing
-any package bytes. Each archive has its own provenance sidecar; `SHA256SUMS`
-records the published asset checksums. The ErsatzRS runtime verifies its exact
-archive and payload pins before executing Next.
+The archives are the exact qualified packages, published without rebuilding.
+Each archive has a provenance sidecar; `SHA256SUMS` covers the release assets.
+ErsatzRS verifies archive and payload pins before executing Next.
 
-Linux and Windows have application playback evidence. ARM and macOS packages
-have build/package evidence; their application acceptance remains explicitly
-unverified. No new platform or hardware validation is claimed by this mirror.
+Linux and native Windows software playback, available Windows CUDA and ARM
+software emulation have scoped verification. Native ARM, macOS and unavailable
+hardware remain unverified/deferred. No new macOS packages are supplied.
+Application integration and acceptance are separate from package qualification.
+ErsatzRS retains its selectable Native engine alongside Next.
 
-## Temporary compatibility patches
+## Source and temporary corrections
 
-The release contains the bounded live RTSP buffering and programme-image repeat
-patches together with the reviewed upstream source. They must be removed once
-upstream provides equivalent corrections and the existing regression and
-compatibility checks pass. The tests remain.
+The release includes the exact upstream source archive, twelve patches, their
+manifest, the source-preparation script and MIT licence. The corrections cover
+bounded inputs, image repetition, dependency security, MPP readiness, selected
+audio/caption clocks and finite ownership, plus the atomic indexed-playout
+reader and package metadata. The manifest records each patch checksum and
+retirement condition. Remove a correction when equivalent upstream behavior
+passes its unchanged regression and compatibility checks; retain the tests.
+
+The asset README records its pre-publication qualification state. These release
+notes and the immutable checksums identify the published distribution.
 
 ## Licence
 
-Next is distributed under its upstream MIT licence, included as `LICENSE` in the
-release and runtime archives. FFmpeg is distributed separately.
+Next uses the upstream MIT licence, included as `LICENSE` in the release and
+runtime archives.
