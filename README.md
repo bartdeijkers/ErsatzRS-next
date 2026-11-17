@@ -6,9 +6,9 @@ checksums. FFmpeg is distributed separately.
 
 ## Current runtime
 
-- Version: `0.2.5-c5cb065-ersatzrs.1`
-- [Release and downloads](https://github.com/bartdeijkers/ErsatzRS-next/releases/tag/next-0.2.5-c5cb065-ersatzrs.1)
-- Upstream: `ErsatzTV/next`, revision `c5cb065f9f35dbbcb7c05845f0f92c70f576a480`.
+- Version: `0.2.5-6c9e0cf-ersatzrs.1`
+- [Release and downloads](https://github.com/bartdeijkers/ErsatzRS-next/releases/tag/next-0.2.5-6c9e0cf-ersatzrs.1)
+- Upstream: `ErsatzTV/next`, revision `6c9e0cf733f6439cc4f2a5f8ad763b3a31518797`.
 - Packages: Linux x64, Linux ARM64, Linux ARMv7 and Windows x64.
 
 The archives are the exact qualified packages, published without rebuilding.
@@ -23,9 +23,10 @@ ErsatzRS retains its selectable Native engine alongside Next.
 
 ## Source and temporary corrections
 
-The release includes the exact upstream source archive, twelve patches, their
+The release includes the exact upstream source archive, thirteen patches, their
 manifest, the source-preparation script and MIT licence. The corrections cover
-bounded inputs, image repetition, dependency security, MPP readiness, selected
+session/readiness and shared still-image caching, bounded inputs, image
+repetition, dependency security, MPP readiness, selected
 audio/caption clocks and finite ownership, plus the atomic indexed-playout
 reader and package metadata. The manifest records each patch checksum and
 retirement condition. Remove a correction when equivalent upstream behavior
